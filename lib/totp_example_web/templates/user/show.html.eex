@@ -20,6 +20,11 @@ Here they're displayed for demonstration.</p>
     <%= @user.otp_last %>
   </li>
 
+  <li>
+    <strong>OTP Current Code:</strong>
+    <%= @totp_code %>
+  </li>
+
 </ul>
 
 <span><%= link "Edit", to: Routes.user_path(@conn, :edit, @user) %></span>

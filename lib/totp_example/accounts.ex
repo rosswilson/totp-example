@@ -101,4 +101,17 @@ defmodule TotpExample.Accounts do
   def change_user(%User{} = user) do
     User.changeset(user, %{})
   end
+
+  @doc """
+  Returns the current interval TOTP code for a given user.
+
+  ## Examples
+
+      iex> generate_totp_code(user)
+      473820
+
+  """
+  def generate_totp_code(%User{otp_secret: secret}) do
+    :pot.totp(secret)
+  end
 end
