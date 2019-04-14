@@ -29,7 +29,13 @@ defmodule TotpExampleWeb.UserController do
   def show(conn, %{"id" => id}) do
     user = Accounts.get_user!(id)
     totp_code = Accounts.generate_totp_code(user)
-    render(conn, "show.html", user: user, totp_code: totp_code)
+    totp_enrolment_url = Accounts.generate_totp_enrolment_url(user)
+
+    render(conn, "show.html",
+      user: user,
+      totp_code: totp_code,
+      totp_enrolment_url: totp_enrolment_url
+    )
   end
 
   def edit(conn, %{"id" => id}) do

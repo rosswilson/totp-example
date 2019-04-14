@@ -25,7 +25,6 @@ for demonstration.</p>
 
         <td>
           <%= link "Show", to: Routes.user_path(@conn, :show, user) %>
-          <%= link "Edit", to: Routes.user_path(@conn, :edit, user) %>
           <%= link "Delete", to: Routes.user_path(@conn, :delete, user), method: :delete, data: [confirm: "Are you sure?"] %>
         </td>
       </tr>
