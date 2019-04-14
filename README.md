@@ -4,6 +4,13 @@ An Elixir Phoenix Framework application demonstrating TOTP two factor authentica
 
 ![](docs/user.png)
 
+## Features
+
+  * Generates a random secret code, stored in the database alongside a user
+  * Builds a [Google Authenticator compatbile](https://github.com/google/google-authenticator/wiki/Key-Uri-Format)
+    enrolment URL and displays a QR code.
+  * Outputs the expected TOTP code, refreshing every 30 seconds.
+
 ## Getting Started
 
   * Install dependencies with `mix deps.get`
