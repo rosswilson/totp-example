@@ -1,6 +1,10 @@
-# TotpExample
+# TOTP Example
 
-To start your Phoenix server:
+An Elixir Phoenix Framework application demonstrating TOTP two factor authentication.
+
+![](docs/user.png)
+
+## Getting Started
 
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
@@ -9,12 +13,7 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## Learn More
 
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+  * TOTP Explanation: https://en.wikipedia.org/wiki/Time-based_One-time_Password_algorithm
+  * QR Code URI Format: https://github.com/google/google-authenticator/wiki/Key-Uri-Format
