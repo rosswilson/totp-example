@@ -43,7 +43,7 @@ defmodule TotpExample.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:pot, "~>0.9.7"}
+      {:pot, "~>0.10.1"}
     ]
   end
 
