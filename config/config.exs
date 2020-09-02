@@ -16,7 +16,7 @@ config :totp_example, TotpExampleWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "twdgvpWukA4RIt/a6gsSMQNdFzfLIdY2CRnCczI1qjWADse+qJgJcLDi/hUIXbBb",
   render_errors: [view: TotpExampleWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: TotpExample.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub_server: TotpExample.PubSub
 
 # Configures Elixir's Logger
 config :logger, :console,

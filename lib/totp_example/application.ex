@@ -10,6 +10,8 @@ defmodule TotpExample.Application do
     children = [
       # Start the Ecto repository
       TotpExample.Repo,
+      # Start the PubSub system
+      {Phoenix.PubSub, name: TotpExample.PubSub},
       # Start the endpoint when the application starts
       TotpExampleWeb.Endpoint
       # Starts a worker by calling: TotpExample.Worker.start_link(arg)

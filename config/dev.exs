@@ -1,5 +1,14 @@
 use Mix.Config
 
+# Configure your database
+config :totp_example, TotpExample.Repo,
+  username: "postgres",
+  password: "postgres",
+  database: "totp_example_dev",
+  hostname: "localhost",
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
@@ -51,7 +60,7 @@ config :totp_example, TotpExampleWeb.Endpoint,
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/totp_example_web/{live,views}/.*(ex)$",
+      ~r"lib/totp_example_web/(live|views)/.*(ex)$",
       ~r"lib/totp_example_web/templates/.*(eex)$"
     ]
   ]
@@ -65,11 +74,3 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
-
-# Configure your database
-config :totp_example, TotpExample.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "totp_example_dev",
-  hostname: "localhost",
-  pool_size: 10
